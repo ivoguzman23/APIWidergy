@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user_dev.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user_dev.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user_dev.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user_dev.password %>
+</p>
+
+<p>
+  <strong>Password confirmation:</strong>
+  <%= @user_dev.password_confirmation %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @user_dev.image_url %>
+</p>
+
+<p>
+  <strong>Locale:</strong>
+  <%= @user_dev.locale %>
+</p>
+
+<%= link_to 'Edit', edit_user_dev_path(@user_dev) %> |
+<%= link_to 'Back', user_devs_path %>
