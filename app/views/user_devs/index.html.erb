@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Devs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Password confirmation</th>
+      <th>Image url</th>
+      <th>Locale</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_devs.each do |user_dev| %>
+      <tr>
+        <td><%= user_dev.first_name %></td>
+        <td><%= user_dev.last_name %></td>
+        <td><%= user_dev.email %></td>
+        <td><%= user_dev.password %></td>
+        <td><%= user_dev.password_confirmation %></td>
+        <td><%= user_dev.image_url %></td>
+        <td><%= user_dev.locale %></td>
+        <td><%= link_to 'Show', user_dev %></td>
+        <td><%= link_to 'Edit', edit_user_dev_path(user_dev) %></td>
+        <td><%= link_to 'Destroy', user_dev, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Dev', new_user_dev_path %>
